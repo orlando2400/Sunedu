@@ -27,14 +27,12 @@ public class UniversityServiceImpl implements UniversityService {
 	
 	@Override
 	public List<University> listForAll(String name, String type, Long idUbigeo, String state) {
-		universityRepo.list(name, type, idUbigeo, state);
-		return null;
+		return universityRepo.list(name, type, idUbigeo, state);
 	}
 	
 	@Override
 	public List<University> listName(String name) {
-		universityRepo.listForName(name);
-		return null;
+		return universityRepo.listForName(name);
 	}
 
 	
