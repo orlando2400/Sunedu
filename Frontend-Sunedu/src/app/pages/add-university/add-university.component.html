@@ -1,0 +1,85 @@
+<div class="modal fade"  id="idModalRegistrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog" style="max-width: 70%;">
+        <div class="modal-content" >
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registro de Docente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form class="content" >
+                    <div class="submit-form">
+
+                            <div  class="row">
+                                <div class="col-lg-10">
+                                    <label for="id_reg_nombre">Nombre</label>
+                                    <input type="text"  [(ngModel)]="docente.nombre" placeholder="Ingrese el nombre" class="form-control" name="nombre" id="id_reg_nombre" />
+                                </div>
+
+                                <div class="col-lg-2">
+                                    <label for="id_reg_dni">DNI</label>
+                                    <input  [(ngModel)]="docente.dni" type="text" placeholder="Ingrese DNI" class="form-control" name="dni" id="id_reg_dni"  maxlength="8"/>
+                                </div>
+                            </div>
+
+
+                            <div class="row" style="margin-top: 5%">
+
+                                <div class="col-lg-4">
+                                    <label for="id_reg_departamento">Departamento</label>
+                                    <select [(ngModel)]="docente.ubigeo!.departamento" (change)="cargaProvincia()"   id="id_reg_departamento" name="departamento" class="form-control">
+                                        <option value="-1"> [Seleccione] </option>
+                                        <option *ngFor="let aux of departamentos" value="{{ aux }}">
+                                                    {{ aux }}
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <label  for="id_reg_provincia">Provincia</label>
+                                    <select  [(ngModel)]="docente.ubigeo!.provincia" (change)="cargaDistrito()"   id="id_reg_provincia" name="provincia" class="form-control" >
+                                        <option value="-1"> [Seleccione] </option>
+                                         <option *ngFor="let aux of  provincias" value="{{ aux }}">
+                                                    {{ aux }}
+                                         </option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <label for="id_reg_distrito">Distrito</label>
+                                    <select [(ngModel)]="docente.ubigeo!.idUbigeo"  id="id_reg_distrito" name="distrito" class="form-control">
+                                        <option value="-1"> [Seleccione] </option>
+                                        <option *ngFor="let aux of  distritos" value="{{ aux.idUbigeo }}">
+                                            {{ aux.distrito }}
+                                         </option>
+                                    </select>
+                                </div>
+
+
+
+                            </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="reset"  class="btn btn-secondary" id="btn_reg_limpiar" style="width: 100px;">Limpiar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="btn_reg_cerrar" style="width: 100px;">Close</button>
+                        <div class="form-group text-center">
+                            <div class="col-lg-12">
+                                <button id="id_reg_registra" (click)="registra()"  class="btn btn-success form-control"style="width: 100px;">Registrar</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>

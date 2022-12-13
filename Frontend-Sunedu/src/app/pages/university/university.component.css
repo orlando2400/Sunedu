@@ -1,0 +1,15 @@
+.main{
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    background-color: azure;
+
+}
+table{
+    align-self: flex-start;
+    border-collapse: collapse;
+}
+th{
+    border: 1px solid;
+    padding: 0.5em;
+}
