@@ -18,35 +18,35 @@ import com.app.sunedu.model.University;
 import com.app.sunedu.service.UniversityService;
 
 @RestController
-@RequestMapping("/teacher")
+@RequestMapping("/university")
 public class UniversityController {
 	
 	//Inyectar interfaz servicio teacher
 	@Autowired
-	UniversityService uService;
+	UniversityService service;
 	
 	@PostMapping("/register")
 	public University register(@RequestBody University university) {
-		return uService.register(university);
+		return service.register(university);
 	}
 	@PutMapping("/update")
 	public University update(@RequestBody University university) {
-		return uService.register(university);
+		return service.register(university);
 	}
 	
 	@GetMapping("/list/")
 	public List<University> listUniversity(@PathVariable String name, @PathVariable String type, @PathVariable Long idUbigeo, @PathVariable String state){
-		return uService.listForAll(name, type, idUbigeo, state);
+		return service.listForAll(name, type, idUbigeo, state);
 	}
 	@GetMapping("list/{username}")
 	public List<University> listForName(@PathVariable String username){
 		List<University> salida = null;
 		try {
 			if(username.equals("")) {
-				salida = uService.listName("%");
+				salida = service.listName("%");
 			}
 			else {
-				salida = uService.listName("%"+username+"%");
+				salida = service.listName("%"+username+"%");
 			}
 			
 		} catch (Exception e) {
@@ -59,6 +59,6 @@ public class UniversityController {
 	@DeleteMapping("/delete/{idUniversity}")
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable Long idUniversity) {
-		uService.delete(idUniversity);
+		service.delete(idUniversity);
 	}
 }

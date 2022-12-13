@@ -13,26 +13,26 @@ import com.app.sunedu.service.UniversityService;
 public class UniversityServiceImpl implements UniversityService {
 	
 	@Autowired
-	UniversityRepository universityRepo;
+	UniversityRepository repository;
 	
 	@Override
 	public University register(University university) {
-		return universityRepo.save(university);
+		return repository.save(university);
 	}
 
 	@Override
 	public void delete(Long idUniversity) {
-		universityRepo.deleteById(idUniversity);
+		repository.deleteById(idUniversity);
 	}
 	
 	@Override
 	public List<University> listForAll(String name, String type, Long idUbigeo, String state) {
-		return universityRepo.list(name, type, idUbigeo, state);
+		return repository.list(name, type, idUbigeo, state);
 	}
 	
 	@Override
 	public List<University> listName(String name) {
-		return universityRepo.listForName(name);
+		return repository.listForName(name);
 	}
 
 	

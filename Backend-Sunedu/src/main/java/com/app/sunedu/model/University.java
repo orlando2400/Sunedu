@@ -37,8 +37,5 @@ public class University implements Serializable{
 	@ManyToOne
 	@JoinColumn(name = "idUbigeo")
 	private Ubigeo ubigeo;
-	@Temporal(TemporalType.TIMESTAMP)
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
-	private Date createAt;
 	private static final long serialVersionUID = 1L;
 }
