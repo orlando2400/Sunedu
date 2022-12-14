@@ -1,15 +1,18 @@
 .main{
-    height: 100%;
-    width: 100%;
-    align-content: center;
-    background-color: azure;
-
+    text-align: center;
 }
-table{
-    align-self: flex-start;
+.tb{
+
+    display: inline-block;
+    margin: 2% 15%;
     border-collapse: collapse;
 }
-th{
+thead{
+    background-color: blueviolet;
+    color: white;
     border: 1px solid;
-    padding: 0.5em;
+}
+th, td{
+    border: 1px solid;
+    padding: 10px;
 }

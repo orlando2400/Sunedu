@@ -1,14 +1,29 @@
+.general{
+    font-size: 17px;
+}
 .title{
     font-size: 36px;
 }
 .mision{
     background-color: #f2f5f8;
     border-radius: 10px;
-    font-size: 17px;
-    padding-top: 2%;
-    padding-bottom: 5%;
-    margin-top: 2.25rem;
-    margin-left: 10%;
-    margin-right: 20%;
+    padding: 20px;
+    margin: 2% 15%;
     text-align: justify;
+}
+.funciones{
+    background-color: #f2f5f8;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 2% 15%;
+    text-align: justify;
+}
+.organigrama{
+    background-color: #f2f5f8;;
+    max-width: 100%;
+    text-align: center;
+}
+.org{
+    border: 1px solid;
+    width: 70%;
 }
