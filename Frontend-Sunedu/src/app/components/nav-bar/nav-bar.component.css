@@ -3,8 +3,16 @@
     color: black;
     text-decoration: none;
 }
+.toolbar{
+    background-color: #EEEEEE;
+    color: white;
+}
 .clean{
     margin-left: 5em;
     color: black;
     text-decoration: none;
 }
+a:hover{
+    color: #c2b8b8;
+}
+

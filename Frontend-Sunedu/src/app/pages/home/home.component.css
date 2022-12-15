@@ -5,25 +5,31 @@
     font-size: 36px;
 }
 .mision{
-    background-color: #f2f5f8;
+    max-width: 100%;
+    background-color: var(--plomo);
     border-radius: 10px;
     padding: 20px;
-    margin: 2% 15%;
+    margin: 0% 15%;
     text-align: justify;
+    box-shadow: 10px 10px 10px var(--plomo-2);
+}
+.mision:not(:last-child){
+    margin: 2% 15%;
 }
 .funciones{
-    background-color: #f2f5f8;
+    background-color: var(--plomo);
+    box-shadow: 10px 10px 10px var(--plomo-2);
     border-radius: 10px;
     padding: 20px;
     margin: 2% 15%;
     text-align: justify;
 }
 .organigrama{
-    background-color: #f2f5f8;;
+    background-color: var(--plomo);
     max-width: 100%;
     text-align: center;
 }
 .org{
-    border: 1px solid;
+    border: 1px solid black;
     width: 70%;
 }
