@@ -1,9 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {MatTableModule} from '@angular/material/table';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +7,7 @@ import { AddUniversityComponent } from './pages/add-university/add-university.co
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { UniversityComponent } from './pages/university/university.component';
+import { AngularMaterialModule } from './shared/angular-material/angular-material.module';
 
 @NgModule({
   declarations: [
@@ -23,10 +20,7 @@ import { UniversityComponent } from './pages/university/university.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatToolbarModule,
-    MatIconModule
+    AngularMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

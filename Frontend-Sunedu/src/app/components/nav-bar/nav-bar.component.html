@@ -1,9 +1,10 @@
-<nav>
-    <mat-toolbar  class="toolbar">
+<mat-toolbar  class="toolbar">
+      <button mat-icon-button class="icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
       <a [routerLink]="'/'" mat-icon-button class="example-icon favorite-icon"><img src="../../../assets/logo-sunedu.png" width="30px" height="30px" alt=""></a>
       <span><a class="title" [routerLink]="'/'">Sunedu</a> </span>
-      <span class="example-spacer"></span>
       <a [routerLink]="'/universidades'" class="clean">Universidades</a>
       <a [routerLink]="'/registrar'" class="clean">Registrar Universidad</a>
-    </mat-toolbar>
-  </nav>
+</mat-toolbar>
+

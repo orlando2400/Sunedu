@@ -1,18 +1,16 @@
-.content-body{
-    display: grid;
-    align-content: center;
-    margin: 15%;
-}
-.content-form{
+/*Iphone 10*/
+@media(max-width:415px){
+  .content-form{
+    text-align: center;
     border: 1px solid red;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-label{
-    display: inline-block;
-}
-input,button{
+  }
+  label, input,button,select{
     display: block;
+    margin: 10px 0;
+    background-position: center center;
+  }
+  input{
+    height: 20px;
+    width: 90%;
+  }
 }

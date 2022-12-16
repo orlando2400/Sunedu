@@ -16,3 +16,6 @@ th, td{
     border: 1px solid;
     padding: 10px;
 }
+.name{
+  width: 400px;
+}
