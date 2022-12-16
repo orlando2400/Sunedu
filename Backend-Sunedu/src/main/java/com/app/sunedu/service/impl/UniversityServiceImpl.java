@@ -19,7 +19,19 @@ public class UniversityServiceImpl implements UniversityService {
 	public University register(University university) {
 		return repository.save(university);
 	}
-
+	
+	public University update(University university) {
+		University local = repository.findByCodigoEntidad(university.getCodigoEntidad());
+		if(local!= null) {
+			university.setIdUniversity(local.getIdUniversity());
+			local = repository.save(university);
+		}
+		else{
+			System.out.println("No existe en el sistema");
+		}
+		return local;
+	}
+	
 	@Override
 	public void delete(Long idUniversity) {
 		repository.deleteById(idUniversity);

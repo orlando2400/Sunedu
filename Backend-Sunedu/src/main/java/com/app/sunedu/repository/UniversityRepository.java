@@ -13,4 +13,6 @@ public interface UniversityRepository extends JpaRepository<University, Long>{
 
 	@Query("select u from University u where u.name like ?1")
 	public List<University> listForName(String name);
+	
+	public University findByCodigoEntidad(Integer codigoEntidad);
 }

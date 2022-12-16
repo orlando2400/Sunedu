@@ -26,33 +26,34 @@ public class UniversityController {
 	UniversityService service;
 	
 	@PostMapping("/register")
+	@ResponseStatus(code = HttpStatus.CREATED)
 	public University register(@RequestBody University university) {
 		return service.register(university);
 	}
 	@PutMapping("/update")
+	@ResponseStatus(code = HttpStatus.CREATED)
 	public University update(@RequestBody University university) {
-		return service.register(university);
+		return service.update(university);
 	}
 	
-	@GetMapping("/list/")
+	@GetMapping("/list")
 	public List<University> listUniversity(@PathVariable String name, @PathVariable String type, @PathVariable Long idUbigeo, @PathVariable String state){
 		return service.listForAll(name, type, idUbigeo, state);
 	}
-	@GetMapping("list/{username}")
-	public List<University> listForName(@PathVariable String username){
+	@GetMapping("list/{filter}")
+	public List<University> listForName(@PathVariable String filter){
 		List<University> salida = null;
 		try {
-			if(username.equals("")) {
+			if(filter.equals("")) {
 				salida = service.listName("%");
 			}
 			else {
-				salida = service.listName("%"+username+"%");
+				salida = service.listName("%"+filter+"%");
 			}
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 		return salida ;
 	}
 	
