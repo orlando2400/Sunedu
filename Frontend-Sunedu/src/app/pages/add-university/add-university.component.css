@@ -1,16 +1,49 @@
-/*Iphone 10*/
-@media(max-width:415px){
-  .content-form{
-    text-align: center;
-    border: 1px solid red;
-  }
-  label, input,button,select{
-    display: block;
-    margin: 10px 0;
-    background-position: center center;
-  }
-  input{
+/*MÓVILES ancho de 320px*/
+.content-title h2{
+  font-size: 2em;
+  margin: 20px 10% 10px 20px;
+}
+.content-title p{
+  font-size: 0.9em;
+  margin: 20px 3% 10px 20px;
+}
+label,input,button,select{
+  margin: 20px 0  20px 20px;
+  display: block;
+  background-position: center center;
+}
+.content-form{
+  margin: 20px;
+  font-size: 1.2em;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.content-form label{
+
+  font-weight: bold;
+}
+.content-form input{
+  height: 40px;
+}
+.content-form select{
+  width: 120px;
+  height: 40px;
+}
+.content-form button{
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  color: white;
+  border: none;
+  background-color: rgba(33, 163, 39, 0.849);
+}
+input{
     height: 20px;
     width: 90%;
-  }
+}
+
+/*TABLETS y MONITORES ancho de 768px*/
+
+@media screen and (max-width:800px){
+
 }
