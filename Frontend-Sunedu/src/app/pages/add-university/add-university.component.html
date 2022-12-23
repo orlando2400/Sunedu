@@ -15,14 +15,15 @@
             <label for="Inicio">Inicio</label>
             <input type="text" placeholder="Ingrese el inicio de la licenciatura , si no tiende dejelo en blanco">
             <label for="Fin">Fin</label>
-            <input type="text" placeholder="Ingrese el fin de la licenciatura , si no tiende dejelo en blanco">
-            <select name="Departamento" id="">
-              <option value="1">Lima</option>
-              <option value="2">Ayacucho</option>
+            <input type="text" placeholder="Ingrese el fin de la licenciatura , si no tiene déjelo en blanco">
+            <label for="Departamento">Departamento</label>
+            <select name="Departamento" id="Departament">
+              <option value=""> [Seleccione] </option>
+              <option *ngFor="let departament of departaments" value="departament" >{{departament}}</option>
             </select>
             <button >Registrar</button>
     </form>
-
+    <br>
 
 </div>
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Ubigeo } from 'src/app/models/ubigeo.model';
+import { UbigeoService } from 'src/app/services/ubigeo.service';
 
 @Component({
   selector: 'app-add-university',
@@ -7,11 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddUniversityComponent implements OnInit {
 
-  //docente:[]
-
-  constructor() { }
+  ubigeos ?: Ubigeo[]
+  departaments ?: String[];
+  constructor(private ubigeoService : UbigeoService) { }
 
   ngOnInit(): void {
+    console.log(this.listDepartament());
+    this.listDepartament();
+  }
+  private listDepartament():void{
+    this.ubigeoService.listDepartament().subscribe(departament => {
+      this.departaments = departament;
+    });
+  }
+  registrar():void{
+
   }
 
 }

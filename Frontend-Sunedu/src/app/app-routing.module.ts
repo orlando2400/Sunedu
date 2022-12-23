@@ -7,18 +7,15 @@ import { HomeComponent } from './pages/home/home.component';
 const routes: Routes = [
   {
     path:'',
-    component:HomeComponent,
-    pathMatch:'full'
+    component:HomeComponent
   },
   {
     path:'universidades',
-    component:UniversityComponent,
-    pathMatch:'full'
+    component:UniversityComponent
   },
   {
     path:'registrar',
-    component:AddUniversityComponent,
-    pathMatch:'full'
+    component:AddUniversityComponent
   }
 ];
 

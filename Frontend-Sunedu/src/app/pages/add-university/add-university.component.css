@@ -19,7 +19,6 @@ label,input,button,select{
   border-radius: 5px;
 }
 .content-form label{
-
   font-weight: bold;
 }
 .content-form input{
@@ -44,6 +43,36 @@ input{
 
 /*TABLETS y MONITORES ancho de 768px*/
 
-@media screen and (max-width:800px){
-
+@media screen and (min-width:600px){
+  .content-form{
+    margin: 20px 15% 30px 15%;
+    font-size: 1.3em;
+    border-radius: 15px;
+  }
+  .content-form input{
+    height: 40px;
+    width: 80%;
+  }
+  .content-form select{
+    width: 180px;
+    height: 45px;
+  }
+}
+@media screen and (min-width:1200px){
+  .content-form{
+    margin: 20px 20% 30px 20%;
+    font-size: 1.3em;
+    border-radius: 5px;
+  }
+  .content-form input{
+    height: 50px;
+    width: 80%;
+  }
+  .content-form select{
+    width: 200px;
+    height: 48px;
+  }
+  .content-form button{
+    width: 140px;
+  }
 }

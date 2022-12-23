@@ -15,7 +15,7 @@ import lombok.Setter;
 @Entity
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
-@Table(name = "ubigeos")
+@Table(name = "ubigeo")
 public class Ubigeo implements Serializable{
 	
 	@Id
