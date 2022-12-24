@@ -7,5 +7,5 @@ export class University{
     state?:String;
     startLicense?:String;
     endLicense?:String;
-    ubigeo?:Ubigeo;
+    ubigeo ?: Ubigeo;
 }

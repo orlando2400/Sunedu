@@ -16,10 +16,14 @@
             <input type="text" placeholder="Ingrese el inicio de la licenciatura , si no tiende dejelo en blanco">
             <label for="Fin">Fin</label>
             <input type="text" placeholder="Ingrese el fin de la licenciatura , si no tiene déjelo en blanco">
-            <label for="Departamento">Departamento</label>
-            <select name="Departamento" id="Departament">
+            <label for="departament">Departamento</label>
+            <select [(ngModel)]="university.ubigeo!.departament" name="departament" id="departament" (change)="listProvince">
               <option value=""> [Seleccione] </option>
               <option *ngFor="let departament of departaments" value="departament" >{{departament}}</option>
+            </select>
+            <select [(ngModel)]="university.ubigeo!.province" name="province" id="province">
+              <option value=""> [Seleccione] </option>
+              <option *ngFor="let province of provinces" value="province" >{{province}}</option>
             </select>
             <button >Registrar</button>
     </form>

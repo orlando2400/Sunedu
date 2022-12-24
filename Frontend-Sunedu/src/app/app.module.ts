@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { UniversityComponent } from './pages/university/university.component';
 import { AngularMaterialModule } from './shared/angular-material/angular-material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     AngularMaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

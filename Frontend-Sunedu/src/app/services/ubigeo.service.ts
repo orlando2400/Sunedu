@@ -16,10 +16,10 @@ export class UbigeoService {
     return this.http.get<String[]>(`${this.baseUrl}/departmentList`);
   }
 
- /* listProvince(paramDep: any): Observable<string[]> {
-    return this.http.get<string[]>(baseUrl + '/listProvince/' + paramDep);
+  listProvince(paramDep: any): Observable<string[]> {
+    return this.http.get<string[]>(`${this.baseUrl}/provinceList/${paramDep}`);
   }
-
+  /*
   listDistrict(paramDep: any, paramProv: any): Observable<Ubigeo[]> {
     return this.http.get<Ubigeo[]>(baseUrl + '/listDsitrict/' + paramDep + '/' + paramProv);
   }*/
